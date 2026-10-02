@@ -1,0 +1,15 @@
+# 6. Bubble Sort
+def bubble_sort(a):
+    n = len(a)
+    for end in range(n - 1, 0, -1):
+        swapped = False
+        for i in range(end):
+            if a[i] > a[i + 1]:
+                a[i], a[i + 1] = a[i + 1], a[i]
+                swapped = True
+        if not swapped:
+            break
+    return a
+
+a = [29, 10, 14, 37, 13]
+print(bubble_sort(a))   # [10, 13, 14, 29, 37]
